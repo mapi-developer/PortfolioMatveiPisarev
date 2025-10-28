@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function PortfolioHomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#0a0a0a] text-white selection:bg-blue-500/30 selection:text-white">
@@ -360,3 +361,5 @@ function SocialIcon({
     </a>
   );
 }
+=======
+>>>>>>> f93b3938f8d5e9779aec9d66eecf253eafb61dfc
