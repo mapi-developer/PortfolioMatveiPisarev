@@ -9,7 +9,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi (>=0.120.0,<0.121.0)",
-    "uvicorn[standart] (>=0.38.0,<0.39.0)"
+    "uvicorn[standart] (>=0.38.0,<0.39.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "motor (>=3.7.1,<4.0.0)"
 ]
 
 
@@ -42,6 +44,10 @@ select = [
     "N"
 ]
 
+[[tool.mypy.overrides]]
+module = ["untyped_package.*"]
+follow_untyped_imports = true
+
 [tool.mypy]
 python_version = "3.13"
 strict = true
@@ -53,7 +59,4 @@ disallow_any_generics = true
 disallow_untyped_calls = true
 disallow_untyped_decorators = true
 disallow_untyped_defs = true
-ingore_missing_imports = false
-show_error_codes = true
-warn_return_any = true
-warn_unused_configs = true
+ignore_missing_imports = true
